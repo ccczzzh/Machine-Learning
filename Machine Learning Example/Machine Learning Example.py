@@ -32,7 +32,9 @@ for iteration in range(10000):
 
     adjustments = error * sigmoid_derivative(out)
 
-    synaptic_weights +=np.dot(input_layer.T,adjustments)
+    synaptic_weights1 =np.dot(input_layer.T,adjustments)
+    #print(synaptic_weights1)
+    synaptic_weights += synaptic_weights1
 print('Synaptic weights after training')
 print(synaptic_weights)
 
